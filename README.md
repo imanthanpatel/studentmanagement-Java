@@ -40,13 +40,14 @@ This project is part of my hands-on learning to strengthen **backend development
 
 
 src/main/java
- └── com.example.sms
-     ├── controller
-     ├── service
-     ├── repository
-     ├── dto
-     ├── mapper
-     ├── entity
-     ├── exception
-     └── security
-     └──Configrations
+└── com.example.sms
+    ├── controller        # Handles HTTP requests & responses
+    ├── service           # Business logic layer
+    ├── repository        # Data access layer (JPA Repositories)
+    ├── dto               # Data Transfer Objects
+    ├── mapper            # Entity ↔ DTO mapping
+    ├── entity            # JPA Entity classes
+    ├── exception         # Custom exceptions & global handlers
+    ├── security          # Spring Security configuration
+    └── configurations    # Application & bean configurations
+
