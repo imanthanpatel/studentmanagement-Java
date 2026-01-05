@@ -24,8 +24,12 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(Exception.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public String GenricExceptionHandler(Exception exception){
-        log.warn("", exception.getMessage());
+        log.warn("Somthing Went Wrong", exception);
         return "500";
     }
 
+    @ExceptionHandler(UserNotFoundException.class)
+    public String UerNotFoundException(UserNotFoundException userNotFoundException){
+    return userNotFoundException.getMessage();
+    }
 }

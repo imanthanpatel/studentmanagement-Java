@@ -18,10 +18,13 @@ public class SpringConfig {
             "/css/**",
             "/images/**",
              "/js/**",
-            "/error"
+            "/error",
+
 
     };
 
+
+    @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http){
         http.authorizeHttpRequests(auth -> auth
                 .requestMatchers(PUBLIC_PATH)
