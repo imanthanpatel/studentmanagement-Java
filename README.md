@@ -69,3 +69,8 @@ src/main/java
     ├── exception         # Custom exceptions & global handler
     ├── security          # Spring Security configuration
     └── configurations    # Application & bean configurations
+```
+
+## ⭐ Give a Star
+
+If you like this project, don’t forget to ⭐ the repository!
