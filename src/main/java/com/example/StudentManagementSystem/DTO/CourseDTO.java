@@ -27,7 +27,7 @@ public class CourseDTO {
     private String courseCode;
     @NotBlank(message = "Course description is recquired")
     private String duration;
-    private boolean active;
+    private boolean active = true;
     @NotNull(message = "Course fee is recquired")
     private BigDecimal fee;
     @NotBlank(message = "Description is recquired")
