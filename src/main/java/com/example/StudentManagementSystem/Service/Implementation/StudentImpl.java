@@ -44,6 +44,7 @@ public class StudentImpl implements StudetnService {
     public StudentDTO createStudent(StudentDTO studentDTO) {
         log.info("Creating Course With Id : {}",studentDTO.getId());
         Student student = mapper.map(studentDTO,Student.class);
+
         repositry.save(student);
         return mapper.map(student,StudentDTO.class);
     }
@@ -81,6 +82,7 @@ public class StudentImpl implements StudetnService {
         Student student = repositry.findById(id)
                 .orElseThrow(() -> new UserNotFoundException("User not found with "));
         mapper.map(studentDTO,student);
+
 
         Student save = repositry.save(student);
         return mapper.map(save,StudentDTO.class);

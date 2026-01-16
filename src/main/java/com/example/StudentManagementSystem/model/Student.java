@@ -3,9 +3,12 @@ package com.example.StudentManagementSystem.model;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.Array;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -43,4 +46,12 @@ public class Student {
     private boolean active;
     @Column(nullable = false)
     private String address;
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "Enroll_stud",
+            joinColumns = @JoinColumn(name= "student_id"),
+            inverseJoinColumns = @JoinColumn(name = "course_id")
+
+    )
+    private List<Course> courses = new ArrayList<>();
 }

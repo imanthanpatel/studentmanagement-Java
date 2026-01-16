@@ -1,10 +1,13 @@
 package com.example.StudentManagementSystem.DTO;
 
 
+import com.example.StudentManagementSystem.model.Course;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.util.List;
 
 @Getter
 @Setter
@@ -29,5 +32,6 @@ public class StudentDTO {
 
     private boolean active = true;
     private String address;
+    private List<Course> courses;
 
 }

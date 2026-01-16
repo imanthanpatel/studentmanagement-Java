@@ -11,4 +11,5 @@ public interface CourseService {
     CourseDTO getCourseById(Long id);
     CourseDTO updateCourse(Long id,CourseDTO courseDTO);
     boolean existByCodeAndIdNot(String courseCode,Long id);
+
 }
